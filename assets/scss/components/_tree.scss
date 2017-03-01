@@ -31,7 +31,6 @@
     cursor: pointer;
     touch-action: manipulation;
     user-select: none;
-    color: $color-ui-active;
     border-top: 1px solid $color-border;
     border-bottom: 1px solid $color-border;
     margin-top: -1px;
@@ -70,6 +69,7 @@
     padding-bottom: 0.375rem;
     text-decoration: none;
     color: $color-text;
+    cursor: pointer;
 
     &:hover {
         color: $color-ui-hover;
