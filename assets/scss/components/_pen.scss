@@ -1,5 +1,5 @@
 .Pen {
-    background: white;
+    background: $black;
     padding: 20px 40px 40px;
 
     @include mq($until: navCollapse) {
