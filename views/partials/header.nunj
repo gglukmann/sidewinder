@@ -14,7 +14,7 @@
     </div>
 
     <div class="Header-dropdown">
-        <button class="Header-button Header-button--border-left" data-action="toggle-settings">
+        <button class="Header-button Header-button--border-left Header-button--border-right" data-action="toggle-settings">
             {{ icon.svg('settings') }}
         </button>
         <div class="Header-dropdown-content">

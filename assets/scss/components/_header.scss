@@ -53,7 +53,9 @@
     right: 0;
     color: $color-text;
     background-color: $color-background;
-    border: 2px solid $yellow;
+    border-left: 2px solid $yellow;
+    border-right: 2px solid $yellow;
+    border-bottom: 2px solid $yellow;
     min-width: 240px;
     padding: 30px;
     z-index: 1;
@@ -68,7 +70,7 @@
     height: 48px;
     padding: 14px;
     text-align: center;
-    color: $white;
+    color: $black;
     outline: 0;
     cursor: pointer;
 
@@ -77,15 +79,16 @@
     }
 
     &--border-right {
-        border-right: 1px solid darken($yellow, 5%);
+        border-right: 2px solid darken($yellow, 5%);
     }
 
     &--border-left {
-        border-left: 1px solid darken($yellow, 5%);
+        border-left: 2px solid darken($yellow, 5%);
     }
 
     .Header-dropdown.is-open & {
-        background: $yellow-l;
+        background: $black;
+        color: $yellow;
     }
 }
 
