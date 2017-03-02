@@ -14,10 +14,6 @@
             cursor: grabbing !important;
         }
     }
-
-    @include mq(navCollapse) {
-        background-color: $color-background-offset;
-    }
 }
 
 .Preview-wrapper {
