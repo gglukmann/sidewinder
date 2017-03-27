@@ -14,7 +14,7 @@
     align-items: center;
     width: 100%;
     margin-bottom: -3px;
-    padding: 0 40px;
+    padding: 0;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
 
@@ -48,13 +48,18 @@
         display: block;
         width: 100%;
         text-align: center;
-        padding: 15px 0;
+        padding: 5px 10px;
         border-bottom: 3px solid transparent;
         border-top: 1px solid transparent;
         color: $color-text;
+        font-weight: 700;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
 
         &:hover {
-            border-bottom-color: $color-link;
+            color: $black;
+            border-bottom-color: $yellow;
+            background: $yellow;
 
             svg {
                 opacity: 0.9;
@@ -73,8 +78,9 @@
     &.is-active {
 
         a {
-            border-bottom-color: $color-link;
-            color: $color-link;
+            border-bottom-color: $yellow;
+            color: $black;
+            background: $yellow;
         }
 
         svg {
@@ -86,10 +92,6 @@
         a {
             opacity: 0.5;
         }
-    }
-
-    + .Browser-tab {
-        padding-left: 20px;
     }
 }
 

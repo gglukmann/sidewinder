@@ -2,22 +2,25 @@ $btn-primary-color: $white;
 $btn-primary-background-color: $yellow;
 $btn-primary-border-color: $yellow;
 $btn-border-width: 2px;
-$btn-min-horizontal-padding: 30 - $btn-border-width;
-$btn-icon-padding: 25px - $btn-border-width;
+$btn-icon-padding: 10px;
 $btn-icon-spacing: 8 - 4px;
-$btn-letter-spacing: .2px;
-$btn-line-height: 2.625rem;
 
-$btn-small-font-size: .7858em;
-$btn-small-line-height: 1.429rem;
-$btn-small-min-horizontal-padding: 20 - $btn-border-width;
-$btn-small-icon-padding: 15px - $btn-border-width;
-$btn-small-icon-spacing: 6 - 5px;
+$btn-line-height: 1.286;
+$btn-padding: 10px;
 
-@mixin button-variant($color, $background, $background-h, $border, $border-h) {
+$btn-large-font-size: $h4-size;
+$btn-large-line-height: $h4-line-height;
+$btn-large-min-horizontal-padding: 30 - $btn-border-width;
+$btn-large-icon-padding: $btn-large-min-horizontal-padding - $btn-border-width - 16px;
+$btn-large-icon-spacing: 8 - 4px;
+
+@mixin button-variant($color, $background, $background-h, $border, $border-h, $opacity: 1) {
     color: $color;
     background-color: $background;
     border-color: $border;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     &:focus {
         outline: none;
@@ -26,13 +29,7 @@ $btn-small-icon-spacing: 6 - 5px;
         color: $color;
     }
 
-    &.btn--hide-focus:focus {
-        background-color: $background;
-        border-color: $border;
-    }
-
     &:hover,
-    &.btn--hide-focus:hover,
     a.card:hover &,
     label.form-option-card__label:hover & {
         background-color: $background-h;
@@ -40,8 +37,9 @@ $btn-small-icon-spacing: 6 - 5px;
         color: $color;
     }
 
-    &.btn--disabled {
+    &:disabled {
         color: rgba($color, .5);
+        opacity: $opacity;
 
         &:hover {
             background-color: $background;
@@ -51,71 +49,73 @@ $btn-small-icon-spacing: 6 - 5px;
     }
 }
 
+@mixin button-link-variant($color, $color-h) {
+    color: $color;
+
+    &:focus {
+        color: $color-h;
+    }
+
+    &:hover {
+        background-color: transparent;
+        color: $color-h;
+    }
+}
+
 /*
 Button base styles
 */
 
 .btn {
-    display: inline-block;
+    display: block;
+    width: 100%;
     vertical-align: middle;
     background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-    min-width: 125px;
+    min-width: 100px;
     max-width: 100%;
-    font-size: 12px;
     line-height: $btn-line-height;
     font-weight: 700;
     text-transform: uppercase;
-    text-decoration: none;
     text-align: center;
     box-sizing: border-box;
     border-style: solid;
     border-width: $btn-border-width;
-    padding: 1px (9 - $btn-border-width);
-    border-radius: 20px;
-    letter-spacing: $btn-letter-spacing;
+    padding: 3px 6px;
+    border-radius: 5px;
     cursor: pointer;
-    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
 
-    @include button-variant($white, $yellow, $yellow-l, $yellow, $yellow-l);
+    @include button-variant($black, $yellow, $yellow-l, $yellow, $yellow-l, .2);
 
-    @media only screen and (min-width: $break-sm) {
-        min-width: 150px;
-        font-size: $font-size-small;
-        padding: 1px $btn-min-horizontal-padding;
-    }
-
-    &--disabled {
+    &:disabled {
         cursor: inherit;
-    }
-
-    &--small {
-        min-width: 0;
-        font-size: 11px;
-        line-height: $btn-small-line-height;
-        padding: 1px $btn-small-min-horizontal-padding;
-
-        [class*="btn__icon--"] {
-            /* stylelint-disable declaration-block-no-duplicate-properties */
-            font-size: $btn-small-font-size;
-            font-size: calc(#{$btn-small-font-size} + 1px);
-            /* stylelint-enable */
-        }
-
-        .btn__icon {
-            &--left {
-                margin-right: $btn-small-icon-spacing;
-                margin-left: $btn-small-icon-padding - $btn-small-min-horizontal-padding;
-            }
-
-            &--right {
-                margin-left: $btn-small-icon-spacing;
-                margin-right: $btn-small-icon-padding - $btn-small-min-horizontal-padding;
-            }
-        }
     }
 
     + .btn {
         margin-left: 5px;
+    }
+
+    .modal__footer & {
+        border-radius: 0;
+        border-top: 1px solid rgba($black, .1);
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-size: $h5-size;
+
+        &:first-child {
+            border-right: 1px solid rgba($black, .1);
+        }
+
+        &.btn--back {
+            color: rgba($black, .5);
+        }
+
+        &:hover {
+            color: $yellow;
+            background: $black;
+            border-color: $black;
+        }
     }
 }
 
@@ -123,18 +123,88 @@ Button base styles
 Button variants
 */
 
-.btn--variant-dark {
-    @include button-variant($yellow, $grey-l, $grey-l, $grey-l, $yellow);
-}
-
 .btn--variant-light {
-    @include button-variant($yellow, $white, $white, $white, $yellow);
+    @include button-variant($white, transparent, $grey-l, $grey-l, $grey-l);
 }
 
-.btn--order {
-    @include button-variant($white, $green, $green-l, $green, $green-l);
+.btn--link {
+    display: inline-block;
+    background: transparent;
+    border: 0;
+    text-align: inherit;
+    font-size: $h5-size;
+    height: auto;
+    padding: 0;
+    min-width: 0;
+    line-height: inherit;
+    border-radius: 0;
+
+    &:focus,
+    &:hover {
+        background-color: transparent;
+    }
+
+    @include button-link-variant($yellow, $yellow-l);
+
+    &:disabled {
+        @include button-link-variant($grey-d, $grey-d);
+    }
+
+    &.btn--text {
+        text-transform: none;
+        @include button-link-variant($text-color-base, $white);
+    }
+
+    &.btn--warning {
+        @include button-link-variant($red, $red-l);
+    }
 }
 
-.btn--quit {
-    @include button-variant($white, $red, $red-l, $red, $red-l);
+// Icons
+
+.btn__icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    vertical-align: middle;
+    font-size: 1em;
+
+    .btn--large & {
+        font-size: 20px;
+    }
+
+    .btn--variant-light & {
+        color: $yellow;
+    }
+
+    .btn--link & {
+        position: relative;
+        margin-top: -.2em;
+    }
+}
+
+.btn__icon--left {
+    left: $btn-icon-padding;
+
+    .btn--link & {
+        left: 0;
+        margin-left: 0;
+    }
+}
+
+.btn__icon--right {
+    right: $btn-icon-padding;
+
+    .btn--link & {
+        right: 0;
+        margin-right: 0;
+    }
+}
+
+.btn__icon--close {
+    position: relative;
+    left: 0;
+    right: 0;
+    margin-top: -.2em;
 }

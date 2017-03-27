@@ -79,15 +79,15 @@
     }
 
     @if $preset == body {
-        font: normal 1rem/#{(24 / 16)} $font-family-sans-serif;
+        font: 300 1rem/#{(24 / 16)} $font-family-sans-serif;
     }
 
     @if $preset == code {
-        font: normal 0.875rem/#{(24 / 14)} $font-family-monospace;
+        font: 300 0.875rem/#{(24 / 14)} $font-family-monospace;
     }
 
     @if $preset == navigation {
-        font: normal 0.8125rem/#{(20 / 13)} $font-family-sans-serif;
+        font: 300 0.8125rem/#{(20 / 13)} $font-family-sans-serif;
     }
 
     @if $preset == caption {
