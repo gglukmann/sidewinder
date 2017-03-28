@@ -753,7 +753,6 @@ h6 {
 
 .AssetList-icon {
   -webkit-margin-end: 8px;
-     -moz-margin-end: 8px;
           margin-inline-end: 8px; }
   [dir="ltr"] .AssetList-icon {
     margin-right: 8px; }
@@ -1370,7 +1369,6 @@ h6 {
         opacity: 0.9; }
   .Browser-tab svg {
     -webkit-margin-end: 0.125rem;
-       -moz-margin-end: 0.125rem;
             margin-inline-end: 0.125rem;
     pointer-events: none;
     opacity: 0.6;
@@ -1784,7 +1782,6 @@ span.select2-selection.select2-selection--single {
   @media (max-width: 31.24em) {
     .Frame-body {
       -webkit-margin-end: 240px;
-         -moz-margin-end: 240px;
               margin-inline-end: 240px;
       -webkit-transform: translate3d(-240px, 0, 0);
               transform: translate3d(-240px, 0, 0);
@@ -1811,7 +1808,6 @@ span.select2-selection.select2-selection--single {
 
 .Frame-panel--sidebar {
   -webkit-border-end: 1px solid #e4e4e4;
-     -moz-border-end: 1px solid #e4e4e4;
           border-inline-end: 1px solid #e4e4e4;
   -webkit-flex: 0 0 auto;
       -ms-flex: 0 0 auto;
@@ -1844,7 +1840,6 @@ span.select2-selection.select2-selection--single {
 .Frame-handle {
   transition: all 0.15s ease-out;
   -webkit-margin-end: -0.625rem;
-     -moz-margin-end: -0.625rem;
           margin-inline-end: -0.625rem;
   -webkit-flex: 0 0 auto;
       -ms-flex: 0 0 auto;
@@ -2156,7 +2151,7 @@ span.select2-selection.select2-selection--single {
     margin-left: -200px; } }
 
 .Navigation {
-  display: inline-block;
+  display: block;
   min-width: 100%; }
 
 .Navigation-group::after {
@@ -2232,7 +2227,6 @@ span.select2-selection.select2-selection--single {
   text-decoration: none; }
   .Pen-previewLink svg {
     -webkit-margin-start: 5px;
-       -moz-margin-start: 5px;
             margin-inline-start: 5px;
     fill: #990ae3; }
     [dir="ltr"] .Pen-previewLink svg {
@@ -2247,20 +2241,7 @@ span.select2-selection.select2-selection--single {
   font-size: 14px; }
 
 .Pen-preview {
-  -webkit-flex: 0 0 auto;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
-  height: 50%;
-  max-height: calc(100% - 3.75rem);
   width: 100%; }
-  @media (max-width: 31.24em) {
-    .Pen-preview {
-      -webkit-flex: 1 1 auto;
-          -ms-flex: 1 1 auto;
-              flex: 1 1 auto;
-      height: auto !important;
-      max-height: 100%;
-      margin: 0; } }
 
 .Pen-handle {
   transition: all 0.15s ease-out;
@@ -2336,7 +2317,6 @@ span.select2-selection.select2-selection--single {
   width: 100%;
   width: calc(100% + 0.625rem);
   min-width: 200px;
-  max-width: calc(100% + 0.625rem);
   background-color: transparent;
   min-height: 100px;
   max-width: 100%; }
@@ -2354,7 +2334,6 @@ span.select2-selection.select2-selection--single {
   height: 100%;
   overflow: auto;
   max-width: calc(100% - 0.625rem + 1px);
-  max-height: calc(100% - 0.625rem + 1px);
   min-width: 180px;
   min-height: 100px;
   background-color: white;
@@ -2379,7 +2358,8 @@ span.select2-selection.select2-selection--single {
   position: relative;
   z-index: 0;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  max-height: calc(100% - 0.625rem + 1px); }
 
 .Preview-overlay {
   top: 0;
@@ -2394,7 +2374,6 @@ span.select2-selection.select2-selection--single {
 
 .Preview-handle {
   -webkit-border-start: 1px solid #e4e4e4;
-     -moz-border-start: 1px solid #e4e4e4;
           border-inline-start: 1px solid #e4e4e4;
   transition: all 0.15s ease-out;
   offset-inline-end: 0;
@@ -2510,7 +2489,6 @@ span.select2-selection.select2-selection--single {
     font-feature-settings: "c2sc"; }
   .Prose blockquote {
     -webkit-border-start: solid rgba(0, 0, 0, 0.25);
-       -moz-border-start: solid rgba(0, 0, 0, 0.25);
             border-inline-start: solid rgba(0, 0, 0, 0.25);
     padding-left: 1em;
     opacity: 0.75; }
@@ -2745,7 +2723,6 @@ span.select2-selection.select2-selection--single {
 
 .Status-dot + .Status-dot {
   -webkit-margin-start: 3px;
-     -moz-margin-start: 3px;
           margin-inline-start: 3px; }
   [dir="ltr"] .Status-dot + .Status-dot {
     margin-left: 3px; }
@@ -2773,7 +2750,6 @@ span.select2-selection.select2-selection--single {
 
 .Status-label + .Status-label {
   -webkit-margin-start: 0.25rem;
-     -moz-margin-start: 0.25rem;
           margin-inline-start: 0.25rem; }
   [dir="ltr"] .Status-label + .Status-label {
     margin-left: 0.25rem; }
@@ -2782,7 +2758,6 @@ span.select2-selection.select2-selection--single {
 
 .Status--labelled .Status-label {
   -webkit-margin-end: 0.75rem;
-     -moz-margin-end: 0.75rem;
           margin-inline-end: 0.75rem; }
   [dir="ltr"] .Status--labelled .Status-label {
     margin-right: 0.75rem; }

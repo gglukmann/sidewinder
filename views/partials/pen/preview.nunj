@@ -22,7 +22,7 @@
         {% endif %}
 
     {% else %}
-        <div class="Preview-wrapper" data-role="resizer">
+        <div class="Preview-wrapper" data-role="resizer" {% if entity.display %} style="{% for property, value in entity.display %}{{ property }}: {{ value }}; {% endfor %}"{% endif %}>
             <div class="Preview-resizer">
                 {% if renderError -%}
                     {{ renderError }}
@@ -32,10 +32,9 @@
                     data-role="window"
                     src="{{ previewUrl }}"
                     sandbox="allow-same-origin allow-scripts"
-                    {% if entity.display %} style="{% for property, value in entity.display %}{{ property }}: {{ value }} !important; {% endfor %}"{% endif %}
-                    marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="yes">
+                    marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0">
                 </iframe>
-                {%- endif %}
+                {% endif %}
             </div>
             <div class="Preview-handle" data-role="resize-handle"></div>
             <div class="Preview-handle-horizontal" data-role="resize-handle-hor"></div>

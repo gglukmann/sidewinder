@@ -110,7 +110,7 @@ class Pen {
                 showNotification('error');
             }
 
-            element.remove();
+            $(element).remove();
         }
 
         function showNotification(state) {
