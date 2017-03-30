@@ -1268,7 +1268,8 @@ h6 {
           flex: 1 0 auto;
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
-          flex-direction: row; }
+          flex-direction: row;
+  margin-left: 3px; }
 
 .Browser-links {
   display: -webkit-flex;
@@ -1307,9 +1308,9 @@ h6 {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px; }
     .Browser-tab a:hover {
-      color: #111111;
+      color: #ffffff;
       border-bottom-color: #fdd000;
-      background: #fdd000; }
+      background: #333333; }
       .Browser-tab a:hover svg {
         opacity: 0.9; }
   .Browser-tab svg {
@@ -1325,8 +1326,8 @@ h6 {
       margin-left: 0.125rem; }
   .Browser-tab.is-active a {
     border-bottom-color: #fdd000;
-    color: #111111;
-    background: #fdd000; }
+    color: #ffffff;
+    background: #333333; }
   .Browser-tab.is-active svg {
     opacity: 0.9; }
   .Browser-tab.is-disabled a {
@@ -1353,7 +1354,7 @@ h6 {
   width: 100%;
   background: #111111 url(../img/background.jpg) left top/cover no-repeat;
   padding: 20px;
-  border: 3px solid #fdd000; }
+  border: 3px solid #333333; }
   .Browser-panel.is-active {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1581,7 +1582,7 @@ Button variants
   display: flex;
   width: 100%;
   margin-bottom: 1.5rem;
-  border-bottom: 3px solid #fdd000;
+  border-bottom: 3px solid #333333;
   padding-bottom: 0.5rem; }
   .Document-header .Status {
     margin-left: auto; }
@@ -1626,7 +1627,7 @@ Button variants
 
 .FileBrowser-selectWrapper {
   padding: 15px;
-  border-bottom: 1px solid #ffda31;
+  border-bottom: 1px solid #4d4d4d;
   background-color: #ededed; }
   .FileBrowser-selectWrapper .select2-container {
     min-width: 200px;
@@ -1747,8 +1748,8 @@ span.select2-selection.select2-selection--single {
   -webkit-overflow-scrolling: touch; }
 
 .Frame-panel--sidebar {
-  -webkit-border-end: 1px solid #fdd000;
-          border-inline-end: 1px solid #fdd000;
+  -webkit-border-end: 1px solid #333333;
+          border-inline-end: 1px solid #333333;
   -webkit-flex: 0 0 auto;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
@@ -1756,9 +1757,9 @@ span.select2-selection.select2-selection--single {
   background-color: #111111;
   padding: 20px; }
   [dir="ltr"] .Frame-panel--sidebar {
-    border-right: 1px solid #fdd000; }
+    border-right: 1px solid #333333; }
   [dir="rtl"] .Frame-panel--sidebar {
-    border-left: 1px solid #fdd000; }
+    border-left: 1px solid #333333; }
   @media (max-width: 31.24em) {
     .Frame-panel--sidebar {
       max-width: 240px; } }
@@ -2056,7 +2057,7 @@ span.select2-selection.select2-selection--single {
   padding: 14px 0;
   overflow: hidden; }
   .Meta-item + .Meta-item {
-    border-top: 1px solid #ffda31; }
+    border-top: 1px solid #4d4d4d; }
   .Meta-item:first-child {
     padding-top: 0; }
   .Meta-item:last-child {
@@ -2140,7 +2141,7 @@ span.select2-selection.select2-selection--single {
   @media (max-width: 31.24em) {
     .Pen-header {
       margin: 0;
-      border-bottom: 1px solid #fdd000;
+      border-bottom: 1px solid #333333;
       padding: 0.75rem; }
       .Pen-header .Status .Status-label {
         position: relative;
@@ -2329,8 +2330,8 @@ span.select2-selection.select2-selection--single {
   opacity: 0; }
 
 .Preview-handle {
-  -webkit-border-start: 1px solid #fdd000;
-          border-inline-start: 1px solid #fdd000;
+  -webkit-border-start: 1px solid #333333;
+          border-inline-start: 1px solid #333333;
   transition: all 0.15s ease-out;
   offset-inline-end: 0;
   position: absolute;
@@ -2339,13 +2340,13 @@ span.select2-selection.select2-selection--single {
   z-index: 100;
   height: 100%;
   width: 0.625rem;
-  background: #fdd000 url("../img/icon-drag--vertical.svg") no-repeat 50%;
+  background: #333333 url("../img/icon-drag--vertical.svg") no-repeat 50%;
   background-size: 3px 16px;
   cursor: ew-resize; }
   [dir="ltr"] .Preview-handle {
-    border-left: 1px solid #fdd000; }
+    border-left: 1px solid #333333; }
   [dir="rtl"] .Preview-handle {
-    border-right: 1px solid #fdd000; }
+    border-right: 1px solid #333333; }
   .Preview-handle:hover {
     background-color: #999999; }
   .Preview-handle:active {
@@ -2372,7 +2373,7 @@ span.select2-selection.select2-selection--single {
           flex: 0 0 auto;
   height: 0.625rem;
   margin: 0 0.625rem 0 0;
-  background: #fdd000 url("../img/icon-drag--horizontal.svg") no-repeat 50% 50%;
+  background: #333333 url("../img/icon-drag--horizontal.svg") no-repeat 50% 50%;
   background-size: 16px 3px;
   cursor: ns-resize;
   position: absolute;
@@ -2439,7 +2440,7 @@ span.select2-selection.select2-selection--single {
   .Prose hr {
     height: 0;
     border: 0;
-    border-top: 0.125rem solid #fdd000;
+    border-top: 0.125rem solid #333333;
     margin: 2em 0; }
   .Prose abbr {
     font-feature-settings: "c2sc"; }
@@ -2732,21 +2733,17 @@ span.select2-selection.select2-selection--single {
   background-color: transparent; }
   .Tree-collection.is-closed .Tree-collectionItems {
     display: none; }
-  .Tree-collection.is-closed .Tree-collectionLabel {
-    color: #fdd000; }
-    .Tree-collection.is-closed .Tree-collectionLabel:hover {
-      color: #ffffff; }
   .Tree-collection.is-closed .Tree-collectionIcon {
-    -webkit-transform: rotate(0);
-        -ms-transform: rotate(0);
-            transform: rotate(0); }
+    -webkit-transform: translate(0, -50%) rotate(0);
+        -ms-transform: translate(0, -50%) rotate(0);
+            transform: translate(0, -50%) rotate(0); }
 
 .Tree-collectionLabel {
   position: relative;
   font-weight: 700;
   font-size: 14px;
-  padding-top: 9px;
-  padding-bottom: 9px;
+  padding-top: 3px;
+  padding-bottom: 3px;
   cursor: pointer;
   -ms-touch-action: manipulation;
       touch-action: manipulation;
@@ -2754,17 +2751,19 @@ span.select2-selection.select2-selection--single {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  border-top: 1px solid #fdd000;
-  border-bottom: 1px solid #fdd000;
+  border-top: 1px solid #333333;
+  border-bottom: 1px solid #333333;
   margin-top: -1px;
   color: #ffffff; }
+  .Tree-collectionLabel:hover {
+    color: #fdd000; }
   .Tree-depth-3 .Tree-collectionLabel {
     border-color: transparent; }
 
 .Tree-collectionIcon {
   display: inline-block;
   position: absolute;
-  top: 15px;
+  top: 50%;
   right: 0;
   background-size: 12px;
   background-repeat: no-repeat;
@@ -2772,9 +2771,9 @@ span.select2-selection.select2-selection--single {
   width: 12px;
   height: 12px;
   content: "";
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg); }
+  -webkit-transform: translate(0, -50%) rotate(180deg);
+      -ms-transform: translate(0, -50%) rotate(180deg);
+          transform: translate(0, -50%) rotate(180deg); }
 
 .Tree-item {
   font-size: 14px; }
@@ -2786,12 +2785,17 @@ span.select2-selection.select2-selection--single {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 0.375rem;
-  padding-bottom: 0.375rem;
+  padding-top: 3px;
+  padding-bottom: 3px;
   text-decoration: none;
-  cursor: pointer; }
+  cursor: pointer;
+  color: #ffffff; }
+  .Tree-entityLink:hover {
+    color: #fdd000; }
   .is-current .Tree-entityLink {
-    color: #ffffff; }
+    color: #fdd000; }
+    .is-current .Tree-entityLink:hover {
+      color: #ffa700; }
 
 .Tree-collectionItems {
   padding-left: 20px; }
