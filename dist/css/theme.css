@@ -1301,15 +1301,12 @@ h6 {
     width: 100%;
     text-align: center;
     padding: 5px 10px;
-    border-bottom: 3px solid transparent;
-    border-top: 1px solid transparent;
     color: #ffffff;
     font-weight: 700;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px; }
     .Browser-tab a:hover {
       color: #ffffff;
-      border-bottom-color: #fdd000;
       background: #333333; }
       .Browser-tab a:hover svg {
         opacity: 0.9; }
@@ -1325,7 +1322,6 @@ h6 {
     [dir="rtl"] .Browser-tab svg {
       margin-left: 0.125rem; }
   .Browser-tab.is-active a {
-    border-bottom-color: #fdd000;
     color: #ffffff;
     background: #333333; }
   .Browser-tab.is-active svg {
