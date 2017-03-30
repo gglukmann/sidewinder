@@ -71,7 +71,7 @@ Button base styles
     width: 100%;
     vertical-align: middle;
     background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-    min-width: 100px;
+    min-width: 80px;
     max-width: 100%;
     line-height: $btn-line-height;
     font-weight: 700;

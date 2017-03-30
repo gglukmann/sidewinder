@@ -1391,7 +1391,7 @@ Button base styles
   width: 100%;
   vertical-align: middle;
   background-image: none;
-  min-width: 100px;
+  min-width: 80px;
   max-width: 100%;
   line-height: 1.286;
   font-weight: 700;
