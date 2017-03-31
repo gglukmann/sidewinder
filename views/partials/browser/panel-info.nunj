@@ -15,7 +15,7 @@
             <span class="Meta-value Meta-value--linkList">
             {% for tag in entity.tags %}
                 {% if tag %}
-                    <span>{{ tag }}</span></a>{% if not loop.last %}, {% endif %}
+                    <span>{{ tag }}</span>{% if not loop.last %}, {% endif %}
                 {% endif %}
             {% endfor %}
             </span>
@@ -51,7 +51,7 @@
                 <a href="{{ path(frctl.theme.urlFromRoute('component', { handle: ref.handle })) }}">@<span>{{ ref.handle }}</span></a>{% if not loop.last %}, {% endif %}
             {% endfor %}
             </span>
-        </li class="Meta-item">
+        </li>
         {% endif %}
     </ul>
 </div>
