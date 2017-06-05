@@ -1,7 +1,7 @@
 var $input = jQuery('#search-input');
 var ul = jQuery('#searchid ul' )[0];
 
-$input.on('keyup focus blur change',function () {
+$input.on('keyup change',function () {
     var filter = this.value.toUpperCase();
     search(ul,filter);
     check(jQuery(this));
@@ -9,19 +9,24 @@ $input.on('keyup focus blur change',function () {
 
 function search(list,key) {
     var i, li = jQuery(list).children('li');
+    var allLi = jQuery(list).find('li');
     var match = false;
-    for (i = 0; i < li.length; i++) {
-        var $li = jQuery(li[i]);
-        var childTree = jQuery(li[i]).children('ul');
 
-        if ( $li.parents('.Tree-collection').find('> .Tree-collectionLabel').text().toUpperCase().indexOf(key) !== -1 || ($li.text().toUpperCase().indexOf(key) !== -1) || ($li.find('[data-tags]').attr('data-tags').toUpperCase().indexOf(key) !== -1) ) {
-            match = true;
-            $li.parents('.Tree-collection').removeClass('is-closed');
-            $li.show();
-            search(childTree, key);
-        } else {
-            match = false;
-            $li.hide();
+    if( !key.length ) {
+        allLi.removeClass('is-hidden');
+    } else {
+        for (i = 0; i < li.length; i++) {
+            var $li = jQuery(li[i]);
+            var childTree = jQuery(li[i]).children('ul');
+
+            if ( $li.parents('.Tree-collection').find('> .Tree-collectionLabel').text().toUpperCase().indexOf(key) !== -1 || ($li.text().toUpperCase().indexOf(key) !== -1) || ($li.find('[data-tags]').attr('data-tags').toUpperCase().indexOf(key) !== -1) ) {
+                match = true;
+                $li.removeClass('is-hidden');
+                search(childTree, key);
+            } else {
+                match = false;
+                $li.addClass('is-hidden');
+            }
         }
     }
     return match;
@@ -46,7 +51,7 @@ function check($input) {
         $btn.click(function() {
             $input.val('');
             check($input);
-            $input.focus();
+            $input.focus().trigger('change');
         });
     } else {
         $btn = $input.parent().find('.form-textfield__icon--clear');
