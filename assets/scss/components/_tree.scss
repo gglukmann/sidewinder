@@ -17,6 +17,10 @@
             transform: translate(0, -50%) rotate(0);
         }
     }
+
+    &.is-hidden {
+        display: none;
+    }
 }
 
 .Tree-collectionLabel {
@@ -58,6 +62,10 @@
 
 .Tree-item {
     font-size: 14px;
+
+    &.is-hidden {
+        display: none;
+    }
 }
 
 .Tree-entityLink {
